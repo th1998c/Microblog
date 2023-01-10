@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7d689e1-b2e3-442c-a028-e3299be5edfb" name="Changes" comment="criado form de login e campos validados">
-      <change afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+    <list default="true" id="d7d689e1-b2e3-442c-a028-e3299be5edfb" name="Changes" comment="implementado banco de dados">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/microblog.py" beforeDir="false" afterPath="$PROJECT_DIR$/microblog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,8 +91,17 @@
       <workItem from="1673277085953" duration="4704000" />
       <workItem from="1673353965253" duration="2786000" />
       <workItem from="1673357170132" duration="7415000" />
-      <workItem from="1673370356135" duration="2488000" />
+      <workItem from="1673370356135" duration="5233000" />
+      <workItem from="1673382485525" duration="820000" />
     </task>
+    <task id="LOCAL-00001" summary="implementado banco de dados">
+      <created>1673373212045</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673373212045</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,9 +121,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="retornando post com for e dividindo em layout" />
     <MESSAGE value="criado form de login e campos validados" />
-    <option name="LAST_COMMIT_MESSAGE" value="criado form de login e campos validados" />
+    <MESSAGE value="implementado banco de dados" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementado banco de dados" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Microblog$Flask__microblog_py_.coverage" NAME="Flask (microblog.py) Coverage Results" MODIFIED="1673360418689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Microblog$Flask__microblog_py_.coverage" NAME="Flask (microblog.py) Coverage Results" MODIFIED="1673382596914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
