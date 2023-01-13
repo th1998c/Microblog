@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7d689e1-b2e3-442c-a028-e3299be5edfb" name="Changes" comment="criada tela explorer retornando posts de users nao seguidos">
-      <change afterPath="$PROJECT_DIR$/logs/microblog.log.3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/microblog.log.4" afterDir="false" />
+    <list default="true" id="d7d689e1-b2e3-442c-a028-e3299be5edfb" name="Changes" comment="Criada paginacao para posts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/app.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -255,7 +253,7 @@
       <workItem from="1673455393857" duration="8108000" />
       <workItem from="1673529445878" duration="12855000" />
       <workItem from="1673568527814" duration="102000" />
-      <workItem from="1673613058144" duration="12671000" />
+      <workItem from="1673613058144" duration="14678000" />
     </task>
     <task id="LOCAL-00001" summary="criado form de login e campos validados">
       <created>1673294082759</created>
@@ -313,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673631868593</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Criada paginacao para posts">
+      <created>1673633201057</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673633201057</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,10 +346,11 @@
     <MESSAGE value="criada opcao de seguir e parar de seguir" />
     <MESSAGE value="criado opcao de criar e listar posts" />
     <MESSAGE value="criada tela explorer retornando posts de users nao seguidos" />
-    <option name="LAST_COMMIT_MESSAGE" value="criada tela explorer retornando posts de users nao seguidos" />
+    <MESSAGE value="Criada paginacao para posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criada paginacao para posts" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/microblog$Flask__microblog_py_.coverage" NAME="Flask (microblog.py) Coverage Results" MODIFIED="1673566483534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Microblog$Flask__microblog_py_.coverage" NAME="Flask (microblog.py) Coverage Results" MODIFIED="1673632641697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Microblog$Flask__microblog_py_.coverage" NAME="Flask (microblog.py) Coverage Results" MODIFIED="1673636421672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
