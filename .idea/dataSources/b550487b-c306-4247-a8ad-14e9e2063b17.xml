@@ -1314,101 +1314,128 @@
       <Position>1</Position>
     </argument>
     <table id="482" parent="166" name="alembic_version"/>
-    <table id="483" parent="166" name="post"/>
-    <table id="484" parent="166" name="sqlite_master">
+    <table id="483" parent="166" name="followers"/>
+    <table id="484" parent="166" name="post"/>
+    <table id="485" parent="166" name="sqlite_master">
       <System>1</System>
     </table>
-    <table id="485" parent="166" name="user"/>
-    <column id="486" parent="482" name="version_num">
+    <table id="486" parent="166" name="user"/>
+    <column id="487" parent="482" name="version_num">
       <DasType>VARCHAR(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <index id="487" parent="482" name="sqlite_autoindex_alembic_version_1">
+    <index id="488" parent="482" name="sqlite_autoindex_alembic_version_1">
       <ColNames>version_num</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <key id="488" parent="482" name="alembic_version_pkc">
+    <key id="489" parent="482" name="alembic_version_pkc">
       <ColNames>version_num</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_alembic_version_1</UnderlyingIndexName>
     </key>
-    <column id="489" parent="483" name="id">
+    <column id="490" parent="483" name="follower_id">
+      <DasType>INTEGER|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="491" parent="483" name="followed_id">
+      <DasType>INTEGER|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <foreign-key id="492" parent="483">
+      <ColNames>follower_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>user</RefTableName>
+    </foreign-key>
+    <foreign-key id="493" parent="483">
+      <ColNames>followed_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>user</RefTableName>
+    </foreign-key>
+    <column id="494" parent="484" name="id">
       <DasType>INTEGER|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="490" parent="483" name="body">
+    <column id="495" parent="484" name="body">
       <DasType>VARCHAR(140)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="491" parent="483" name="timestamp">
+    <column id="496" parent="484" name="timestamp">
       <DasType>DATETIME|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="492" parent="483" name="user_id">
+    <column id="497" parent="484" name="user_id">
       <DasType>INTEGER|0s</DasType>
       <Position>4</Position>
     </column>
-    <foreign-key id="493" parent="483">
+    <foreign-key id="498" parent="484">
       <ColNames>user_id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>user</RefTableName>
     </foreign-key>
-    <index id="494" parent="483" name="ix_post_timestamp">
+    <index id="499" parent="484" name="ix_post_timestamp">
       <ColNames>timestamp</ColNames>
     </index>
-    <key id="495" parent="483">
+    <key id="500" parent="484">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="496" parent="484" name="type">
+    <column id="501" parent="485" name="type">
       <DasType>TEXT|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="497" parent="484" name="name">
+    <column id="502" parent="485" name="name">
       <DasType>TEXT|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="498" parent="484" name="tbl_name">
+    <column id="503" parent="485" name="tbl_name">
       <DasType>TEXT|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="499" parent="484" name="rootpage">
+    <column id="504" parent="485" name="rootpage">
       <DasType>INT|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="500" parent="484" name="sql">
+    <column id="505" parent="485" name="sql">
       <DasType>TEXT|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="501" parent="485" name="id">
+    <column id="506" parent="486" name="id">
       <DasType>INTEGER|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="502" parent="485" name="username">
+    <column id="507" parent="486" name="username">
       <DasType>VARCHAR(64)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="503" parent="485" name="email">
+    <column id="508" parent="486" name="email">
       <DasType>VARCHAR(120)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="504" parent="485" name="password_hash">
+    <column id="509" parent="486" name="password_hash">
       <DasType>VARCHAR(128)|0s</DasType>
       <Position>4</Position>
     </column>
-    <index id="505" parent="485" name="ix_user_username">
+    <column id="510" parent="486" name="about_me">
+      <DasType>VARCHAR(140)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="511" parent="486" name="last_seen">
+      <DasType>DATETIME|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <index id="512" parent="486" name="ix_user_username">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="506" parent="485" name="ix_user_email">
+    <index id="513" parent="486" name="ix_user_email">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="507" parent="485">
+    <key id="514" parent="486">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
