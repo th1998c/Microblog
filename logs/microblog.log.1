@@ -1,76 +1,93 @@
-2023-01-12 14:32:06,613 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
-2023-01-12 14:33:31,879 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
-2023-01-12 14:41:52,344 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
-2023-01-12 14:53:26,483 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
-2023-01-12 14:54:44,025 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
-2023-01-12 14:55:14,828 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
-2023-01-12 15:01:31,288 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
-2023-01-12 15:02:01,975 ERROR: Exception on /edit_profile [POST] [in C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\flask\app.py:1741]
+2023-01-12 17:43:44,178 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
+2023-01-12 17:44:33,170 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
+2023-01-12 17:52:56,462 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
+2023-01-12 17:53:57,283 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
+2023-01-13 09:21:19,632 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
+2023-01-13 09:21:29,667 ERROR: Exception on /login [POST] [in C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
 Traceback (most recent call last):
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1900, in _execute_context
-    self.dialect.do_execute(
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 736, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.IntegrityError: UNIQUE constraint failed: user.username
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
     rv = self.dispatch_request()
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1796, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+  File "C:\Users\thiago.silva\Documents\flesk\Microblog\app\routes.py", line 35, in login
+    user = User.query.filter_by(username=form.username.data).first()
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_sqlalchemy\model.py", line 30, in __get__
+    return cls.query_class(
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\query.py", line 180, in __init__
+    self._set_entities(entities)
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\query.py", line 187, in _set_entities
+    self._raw_columns = [
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\query.py", line 188, in <listcomp>
+    coercions.expect(
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\coercions.py", line 186, in expect
+    insp._post_inspect
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\langhelpers.py", line 1184, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\mapper.py", line 2199, in _post_inspect
+    self._check_configure()
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\mapper.py", line 1941, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\mapper.py", line 3527, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\mapper.py", line 3566, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\mapper.py", line 1958, in _post_configure_properties
+    prop.init()
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\interfaces.py", line 231, in init
+    self.do_init()
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\relationships.py", line 2154, in do_init
+    self._setup_join_conditions()
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\relationships.py", line 2250, in _setup_join_conditions
+    self._join_condition = jc = JoinCondition(
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\relationships.py", line 2647, in __init__
+    self._annotate_fks()
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\relationships.py", line 2892, in _annotate_fks
+    self._annotate_present_fks()
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\relationships.py", line 2945, in _annotate_present_fks
+    self.primaryjoin = visitors.cloned_traverse(
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\visitors.py", line 783, in cloned_traverse
+    obj = clone(
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\visitors.py", line 779, in clone
+    meth(newelem)
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\relationships.py", line 2936, in visit_binary
+    col = is_foreign(binary.left, binary.right)
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\orm\relationships.py", line 2915, in is_foreign
+    if a.references(b):
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\schema.py", line 1845, in references
+    if fk.column.proxy_set.intersection(column.proxy_set):
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\util\langhelpers.py", line 1113, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\schema.py", line 2532, in column
+    return self._resolve_column()
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\schema.py", line 2538, in _resolve_column
+    parenttable, tablekey, colname = self._resolve_col_tokens()
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\sqlalchemy\sql\schema.py", line 2458, in _resolve_col_tokens
+    if schema is None and parenttable.metadata.schema is not None:
+AttributeError: 'TableClause' object has no attribute 'metadata'
+2023-01-13 09:33:29,793 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
+2023-01-13 09:33:44,982 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
+2023-01-13 10:37:29,562 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
+2023-01-13 10:49:44,588 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:41]
+2023-01-13 11:15:34,670 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:41]
+2023-01-13 11:15:38,259 ERROR: Exception on /user/user [GET] [in C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\thiago.silva\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\app\routes.py", line 93, in edit_profile
-    db.session.commit()
-  File "<string>", line 2, in commit
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1451, in commit
-    self._transaction.commit(_to_root=self.future)
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
-    self._prepare_impl()
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
-    self.session.flush()
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3444, in flush
-    self._flush(objects)
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3583, in _flush
-    with util.safe_reraise():
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
-    compat.raise_(
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
-    raise exception
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\orm\session.py", line 3544, in _flush
-    flush_context.execute()
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
-    rec.execute(self)
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
-    util.preloaded.orm_persistence.save_obj(
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 237, in save_obj
-    _emit_update_statements(
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1001, in _emit_update_statements
-    c = connection._execute_20(
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1705, in _execute_20
-    return meth(self, args_10style, kwargs_10style, execution_options)
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 334, in _execute_on_connection
-    return connection._execute_clauseelement(
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1572, in _execute_clauseelement
-    ret = self._execute_context(
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1943, in _execute_context
-    self._handle_dbapi_exception(
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2124, in _handle_dbapi_exception
-    util.raise_(
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
-    raise exception
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1900, in _execute_context
-    self.dialect.do_execute(
-  File "C:\Users\thiago.silva\Documents\flesk\Microblog\venv\lib\site-packages\sqlalchemy\engine\default.py", line 736, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
-[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
-[parameters: ('th', '', 2)]
-(Background on this error at: https://sqlalche.me/e/14/gkpj)
-2023-01-12 15:07:10,977 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:43]
+  File "C:\Users\thiago.silva\Documents\flesk\Microblog\app\routes.py", line 76, in user
+    return render_template('user.html', user=user, posts=posts, form=form)
+NameError: name 'form' is not defined
+2023-01-13 11:17:38,195 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:41]
+2023-01-13 11:18:50,566 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:41]
+2023-01-13 11:45:37,853 INFO: Microblog startup [in C:\Users\thiago.silva\Documents\flesk\Microblog\app\__init__.py:41]
